@@ -41,6 +41,9 @@ resource "aws_s3_bucket_website_configuration" "website" {
   index_document {
     suffix = "index.html"
   }
+  error_document {
+    key = "index.html"
+  }
 
 
   depends_on = [aws_s3_bucket_acl.example]
